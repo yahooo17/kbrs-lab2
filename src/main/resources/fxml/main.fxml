@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0"
+            prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="by.bsu.kbrs.client.MainController">
+    <children>
+
+        <TextField fx:id="username" editable="true" promptText="username" prefWidth="100" alignment="BASELINE_CENTER" prefHeight="20"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <HBox.margin>
+                <Insets right="3.0"/>
+            </HBox.margin>
+        </TextField>
+        <TextField fx:id="table" editable="false" prefHeight="200.0" prefWidth="405.0" AnchorPane.bottomAnchor="50.0"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+            <HBox.margin>
+                <Insets right="3.0"/>
+            </HBox.margin>
+        </TextField>
+        <HBox alignment="CENTER" layoutX="21.0" layoutY="207.0" prefHeight="50.0" prefWidth="300.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <children>
+                <TextField fx:id="txtName" promptText="open key">
+                    <HBox.margin>
+                        <Insets right="3.0"/>
+                    </HBox.margin>
+                </TextField>
+                <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#generateOpenKey"
+                        text="generate open key"/>
+                <ListView fx:id="listView">
+                    <HBox.margin>
+                        <Insets right="3.0"/>
+                    </HBox.margin>
+                </ListView>
+                <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#getFile" text="Добавить"/>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
